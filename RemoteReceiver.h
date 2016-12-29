@@ -7,7 +7,11 @@
 #ifndef RemoteReceiver_h
 #define RemoteReceiver_h
 
-#include "WProgram.h"
+#if defined(ARDUINO) && ARDUINO >= 100
+  #include "Arduino.h"
+#else
+  #include "WProgram.h"
+#endif
 
 typedef void (*RemoteReceiverCallBack)(unsigned long, unsigned int);
 

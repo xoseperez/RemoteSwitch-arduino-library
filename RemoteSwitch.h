@@ -7,7 +7,11 @@
 #ifndef RemoteSwitch_h
 #define RemoteSwitch_h
 
-#include "WProgram.h"
+#if defined(ARDUINO) && ARDUINO >= 100
+  #include "Arduino.h"
+#else
+  #include "WProgram.h"
+#endif
 
 /**
 * RemoteSwitch provides a generic class for simulation of common RF remote controls, like the 'Klik aan Klik uit'-system 
